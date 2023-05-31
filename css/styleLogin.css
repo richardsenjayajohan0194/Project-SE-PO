@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12%;
+    background-color: #388AEE;
+    position: sticky;
+    height: fit-content;
+    z-index: 100;
+}
+
+.logo {
+    cursor: pointer;
+    height: 60px;
+    margin: 5px 0px;
+}
+
+.nav_links li a {
+    font-weight: 500;
+    font-size: 23px;
+    color: #EAFDFC;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 15px;
+    transition: all 0.5s ease 0s;
+}
+
+.nav_links {
+    margin-right: 350px;
+}
+
+.nav_links, .button {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav_links li a:hover {
+    color: #91D8E4;
+    background-color: #EAFDFC;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+    
+    background-color: #EAFDFC;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box{
+    position: relative;
+    padding: 30px 50px;
+    height: fit-content;
+    background: #D4F3F9;
+    border: 4px solid #65A7F1;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: #388AEE;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #388AEE;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #65A7F1;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label, input:valid ~ label{
+top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #65A7F1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #82AAE3 !important;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #388AEE;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    text-align: right;
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+
+.forget label a{
+    color: #65A7F1;
+    text-decoration: none;
+}
+
+.forget label a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #388AEE;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #EAFDFC;
+}
+
+.register{
+    font-size: .9em;
+    color: #65A7F1;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #65A7F1;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
+
+
+footer {
+    width: 100%;
+    padding: 40px 80px 40px;
+    color: #EAFDFC;
+    display: flex;
+    background-color: #65A7F1;
+}
+ 
+.service{
+    margin: 20px 10px 20px;
+    padding: 30px 20px 30px;
+}
+ 
+.service h1, .about h1, .follow h1{
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+ 
+.about{
+    margin: 20px 10px 20px;
+    padding: 30px 20px 30px;
+}
+ 
+.isi{
+    padding: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+ 
+.follow{
+    margin: 20px 10px 20px;
+    padding: 30px 20px 30px;
+}
+
+.us{
+    padding: 3px;
+    display: contents;
+}
+ 
+.us img{
+    border-radius: 50%;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #C6E6F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #91D8E4;
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #65A7F1; 
+    border-radius: 10px;
+}

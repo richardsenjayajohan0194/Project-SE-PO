@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12%;
+    background-color: #388AEE;
+    position: sticky;
+    height: fit-content;
+    z-index: 100;
+}
+
+.logo {
+    cursor: pointer;
+    height: 60px;
+    margin: 5px 0px;
+}
+
+.nav_links li a {
+    font-weight: 500;
+    font-size: 23px;
+    color: #EAFDFC;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 15px;
+    transition: all 0.5s ease 0s;
+}
+
+.nav_links {
+    margin-right: 500px;
+}
+
+.nav_links, .button {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav_links li a:hover {
+    color: #91D8E4;
+    background-color: #EAFDFC;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    
+    background-color: #EAFDFC;
+    background-position: center;
+    background-size: cover;
+}
+
+#form-box1, #form-box2{
+    position: relative;
+    padding: 30px 50px;
+    height: fit-content;
+    background: #D4F3F9;
+    border: 4px solid #65A7F1;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+}
+
+#form-box2{
+    display: none;
+}
+
+div.form-value form .error-msg{
+    top: -10px;
+    padding: 10px 0px;
+    position: relative;
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+h2{
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: #388AEE;
+    text-align: center;
+}
+
+.role_group1 {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.role_group2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: -15px;
+}
+
+.role, .category {
+    margin-top: 5px;
+    color: #65A7F1;
+    font-size: 18px;
+}
+
+.user_role, .business_role {
+    margin-top: 5px;
+    margin-left: -5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #65A7F1;
+}
+
+.user_role {
+    width: 50%;
+}
+
+.business_role {
+    width: 46%;
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.part {
+    margin: 15px;
+}
+
+.inputbox, .inputbisnis{
+    position: relative;
+    margin: 20px auto;
+    border-bottom: 2px solid #388AEE;
+}
+
+.inputbox {
+    width: 350px;
+}
+
+.inputbisnis {
+    width: 250px;
+}
+
+.inputbox label, .inputbisnis label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #65A7F1;
+    font-size: 18px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label, input:valid ~ label{
+top: 1px;
+}
+
+.inputbox input, .inputbisnis input {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding:0 35px 0 5px;
+    color: #65A7F1;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #82AAE3 !important;
+}
+
+.inputbox ion-icon, .inputbisnis ion-icon{
+    position: absolute;
+    right: 1px;
+    color: #388AEE;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.style_category{
+    margin-top: -10px;
+    margin-left: 5px;
+}
+
+.business_category{
+    width: 100%;
+    margin-top: 5px;
+    margin-left: -3px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #65A7F1;
+}
+
+select{
+   background: transparent;
+}
+
+.inputfile{
+    margin: 30px 0;
+    width: 240px;
+    border-bottom: 2px solid #388AEE;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.inputfile label{
+    position: absolute;
+    display: inline-block;
+    background:transparent;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    font-size: 18px;
+    left: 5px;
+    color: #65A7F1;
+    cursor: pointer;
+}
+
+#upload{
+    position: relative;
+    z-index: -1;
+    width:300px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #65A7F1;
+}
+
+::-webkit-file-upload-button{
+    width: 40%;
+    background: transparent;
+    border:none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: transparent;
+}
+
+.submit_btn1 {
+    text-align: center;
+    margin: 10% 0px 20px 0px;
+}
+
+.submit_btn2 {
+    text-align: center;
+    margin: 4% 0px 20px 0px;
+}
+
+button{
+    width: 50%;
+    height: 40px;
+    border-radius: 40px;
+    background: #388AEE;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: #EAFDFC;
+}
+
+.login{
+    font-size: 15px;
+    color: #65A7F1;
+    text-align: center;
+}
+
+.login p a{
+    text-decoration: none;
+    color: #388AEE;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.login p a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    padding: 40px 80px 40px;
+    color: #EAFDFC;
+    display: flex;
+    background-color: #65A7F1;
+}
+ 
+.service{
+    margin: 20px 10px 20px;
+    padding: 30px 20px 30px;
+}
+ 
+.service h1, .about h1, .follow h1{
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+ 
+.about{
+    margin: 20px 10px 20px;
+    padding: 30px 20px 30px;
+}
+ 
+.isi{
+    padding: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+ 
+.follow{
+    margin: 20px 10px 20px;
+    padding: 30px 20px 30px;
+}
+
+.us{
+    padding: 3px;
+    display: contents;
+}
+ 
+.us img{
+    border-radius: 50%;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #C6E6F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #91D8E4;
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #65A7F1; 
+    border-radius: 10px;
+}
+
