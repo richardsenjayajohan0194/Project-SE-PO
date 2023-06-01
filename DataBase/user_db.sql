@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 31, 2023 at 01:09 PM
+-- Generation Time: Jun 01, 2023 at 08:13 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.25
 
@@ -97,36 +97,9 @@ INSERT INTO `detail` (`id_order`, `id_product`, `quantity`, `temporary_price`) V
 ('OI003', 'PD002', 14, 12000),
 ('OI004', 'PD003', 6, 8000),
 ('OI006', 'PD001', 12, 8000),
-('OI007', 'PD001', 12, 8000);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `names`
---
-
-CREATE TABLE `names` (
-  `id` int NOT NULL,
-  `names` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `names`
---
-
-INSERT INTO `names` (`id`, `names`) VALUES
-(1, '111'),
-(2, '222'),
-(3, '333'),
-(4, '444'),
-(5, 'gg'),
-(6, '111'),
-(7, '123'),
-(8, '1234'),
-(9, '12345'),
-(10, '123456'),
-(11, '123'),
-(12, '1234');
+('OI007', 'PD001', 12, 8000),
+('OI008', 'PD001', 22, 8000),
+('OI009', 'PD002', 11, 12000);
 
 -- --------------------------------------------------------
 
@@ -148,9 +121,11 @@ CREATE TABLE `orderitem` (
 
 INSERT INTO `orderitem` (`id_order`, `id_user`, `total_price`, `order_date`, `status`) VALUES
 ('OI003', 1, 168000, '2023-06-12', 'Delivery'),
-('OI004', 1, 48000, '2023-06-14', 'Delivery'),
+('OI004', 1, 48000, '2023-06-14', 'Payment Validation'),
 ('OI006', 4, 96000, '2023-06-13', 'Delivery'),
-('OI007', 1, 96000, '2023-06-12', 'Delivery');
+('OI007', 1, 96000, '2023-06-12', 'Payment Validation'),
+('OI008', 1, 176000, '2023-06-14', 'Delivery'),
+('OI009', 1, 132000, '2023-06-15', 'No Payment Validation');
 
 -- --------------------------------------------------------
 
@@ -226,12 +201,6 @@ ALTER TABLE `detail`
   ADD KEY `id_product` (`id_product`);
 
 --
--- Indexes for table `names`
---
-ALTER TABLE `names`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `orderitem`
 --
 ALTER TABLE `orderitem`
@@ -266,12 +235,6 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `bisnis_partner`
   MODIFY `id_bisnis_partner` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
-
---
--- AUTO_INCREMENT for table `names`
---
-ALTER TABLE `names`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `user`
