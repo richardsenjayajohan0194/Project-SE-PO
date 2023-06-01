@@ -62,7 +62,7 @@ if(!isset($_SESSION['username'])){
                 </li>
             </ul>
         </nav>
-        <button class="signout" onclick="location.href='logout.php'">SIGN OUT</button>
+        <button class="signout" onclick="location.href='PHP/logout.php'">SIGN OUT</button>
     </header>
     <!-- Container -->
     <div class="container">

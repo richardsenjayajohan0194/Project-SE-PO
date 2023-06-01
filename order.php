@@ -98,7 +98,7 @@ if(!isset($_GET['id'])){
                                     <p class="order_name"><?php echo $rowJoin['product_name']?></p>
                                     <p class="order_date">Delivery Date : <?php echo $rowJoin['order_date']?></p>
                                     <p class="order_quantity">Quantity : <?php echo $rowJoin['quantity']?></p>
-                                    <p class="order_price">Price : <?php echo $rowJoin['temporary_price']?></p>
+                                    <p class="order_price">Price : Rp <?php echo number_format($rowJoin['temporary_price'],0,',','.');?>,00</p>
                                 </div>
                             </div>
                             <div>
@@ -110,7 +110,7 @@ if(!isset($_GET['id'])){
                     <?php }?>
                     <form action="PHP/payment.php?id_user=<?php echo $_SESSION['id_user']?>" method="POST">
                     <div>
-                        <p class="order_total_price">Total Price:<?php echo $price?></p>
+                        <p class="order_total_price">Total Price : RP <?php echo number_format($price,0,',','.');?>,00</p>
                         <button class="payment_btn" name="submit">Confirm Payment</button>
                     </div>
                     </form>
@@ -135,8 +135,9 @@ if(!isset($_GET['id'])){
                                 <div class="o_part2">
                                     <p class="order_name"><?php echo $rowHistory['product_name']?></p>
                                     <p class="order_date">Delivery Date : <?php echo $rowHistory['order_date']?></p>
+                                    <p class="order_status">Status : <?php echo $rowHistory['status']?></p>
                                     <p class="order_quantity">Quantity : <?php echo $rowHistory['quantity']?></p>
-                                    <p class="order_price">Price : <?php echo $rowHistory['temporary_price']?></p>
+                                    <p class="order_price">Price : Rp <?php echo number_format($rowHistory['temporary_price'],0,',','.');?>,00</p>
                                 </div>
                             </div>
                         </div>
@@ -246,10 +247,6 @@ if(!isset($_GET['id'])){
          </div>
     </footer>
 </body>
-<!-- <script>
-    var today = new Date().toISOString().split('T')[0];
-    document.getElementById("datefield").setAttribute("max",today);
-</script> -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>

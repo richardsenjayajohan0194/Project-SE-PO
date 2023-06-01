@@ -70,7 +70,7 @@ header {
 .dropdown-content {
     height: fit-content;
     max-height: 600px;
-    width: 400px;
+    width: 450px;
     display: none;
     position: absolute;
     margin-top: 10px;

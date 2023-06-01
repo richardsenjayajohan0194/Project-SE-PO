@@ -9,9 +9,7 @@ if(!isset($_POST['submit'])){
 
 }else{
     $id_user = $_GET['id'];
-    echo $id_user;
     $id_order = $_GET['id_order'];
-    echo $id_order;
     
     $sqlO = "SELECT * FROM orderitem WHERE id_user=$id_user AND id_order='$id_order'";
     $dataO = mysqli_query($conn,$sqlO);
